@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		9CC3F1AD2A72F6100034E05B /* EssentialFeed.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CC3F1AC2A72F6100034E05B /* EssentialFeed.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CC3F1B42A72F62F0034E05B /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC3F1B32A72F62F0034E05B /* FeedItem.swift */; };
+		9CC3F1B62A72F6C30034E05B /* FeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC3F1B52A72F6C30034E05B /* FeedLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9CC3F1A92A72F6100034E05B /* EssentialFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EssentialFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CC3F1AC2A72F6100034E05B /* EssentialFeed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EssentialFeed.h; sourceTree = "<group>"; };
 		9CC3F1B32A72F62F0034E05B /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
+		9CC3F1B52A72F6C30034E05B /* FeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			children = (
 				9CC3F1AC2A72F6100034E05B /* EssentialFeed.h */,
 				9CC3F1B32A72F62F0034E05B /* FeedItem.swift */,
+				9CC3F1B52A72F6C30034E05B /* FeedLoader.swift */,
 			);
 			path = EssentialFeed;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CC3F1B62A72F6C30034E05B /* FeedLoader.swift in Sources */,
 				9CC3F1B42A72F62F0034E05B /* FeedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
