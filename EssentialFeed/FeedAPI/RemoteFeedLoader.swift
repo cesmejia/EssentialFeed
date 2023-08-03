@@ -21,20 +21,21 @@ public final class RemoteFeedLoader {
         self.client = client
     }
     
-    public func load(completion: @escaping (Error) -> Void) {
+    public func load(completion: @escaping (FeedItemResult) -> Void) {
         client.get(from: url) { result in
             switch result {
             case let .success(response):
-                completion(.invalidData)
+                completion(.failure(.invalidData))
             case let .failure(error):
-                completion(.connectivity)
+                completion(.failure(.connectivity))
             }
         }
     }
 }
 
-public typealias HTTPCLientResult = (Result<(Data, HTTPURLResponse), Error>)
+public typealias HTTPClientResult = (Result<(Data, HTTPURLResponse), Error>)
+public typealias FeedItemResult = (Result<[FeedItem], RemoteFeedLoader.Error>)
 
 public protocol HTTPClient {
-    func get(from url: URL, completion: @escaping (HTTPCLientResult) -> Void)
+    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
 }
