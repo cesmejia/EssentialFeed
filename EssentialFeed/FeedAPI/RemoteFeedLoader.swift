@@ -38,12 +38,7 @@ public final class RemoteFeedLoader {
     }
 }
 
-public typealias HTTPClientResult = (Result<(data: Data, httpUrlResponse: HTTPURLResponse), Error>)
 public typealias FeedItemResult = (Result<[FeedItem], RemoteFeedLoader.Error>)
-
-public protocol HTTPClient {
-    func get(from url: URL, completion: @escaping (HTTPClientResult) -> Void)
-}
 
 private class FeedItemsMapper {
     private struct Root: Decodable {
