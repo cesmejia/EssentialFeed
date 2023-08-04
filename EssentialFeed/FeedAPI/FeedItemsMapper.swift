@@ -29,7 +29,7 @@ final class FeedItemsMapper {
         }
     }
     
-    static func map(data: Data, from response: HTTPURLResponse) -> FeedItemResult {
+    static func map(data: Data, from response: HTTPURLResponse) -> LoadFeedResult {
         guard response.statusCode == OK_200, let root = try? JSONDecoder().decode(Root.self, from: data) else {
             return .failure(.invalidData)
         }

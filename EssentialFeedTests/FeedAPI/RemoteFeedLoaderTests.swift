@@ -88,7 +88,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
         let client = HTTPClientSpy()
         var sut: RemoteFeedLoader? = RemoteFeedLoader(url: url, client: client)
         
-        var capturedResults = [FeedItemResult]()
+        var capturedResults = [LoadFeedResult]()
         sut?.load { capturedResults.append($0) }
         
         sut = nil
@@ -154,8 +154,8 @@ final class RemoteFeedLoaderTests: XCTestCase {
         return try! JSONSerialization.data(withJSONObject: json)
     }
     
-    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: EssentialFeed.FeedItemResult, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
-        var capturedResults = [FeedItemResult]()
+    private func expect(_ sut: RemoteFeedLoader, toCompleteWith result: EssentialFeed.LoadFeedResult, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        var capturedResults = [LoadFeedResult]()
         sut.load { capturedResults.append($0) }
         
         action()
