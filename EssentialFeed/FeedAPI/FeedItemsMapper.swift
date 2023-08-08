@@ -25,7 +25,7 @@ final class FeedItemsMapper {
         let image: URL
         
         var item: FeedItem {
-            FeedItem(id: id, decription: description, location: location, imageURL: image)
+            FeedItem(id: id, description: description, location: location, imageURL: image)
         }
     }
     

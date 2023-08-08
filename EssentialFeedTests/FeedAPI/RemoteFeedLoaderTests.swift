@@ -132,7 +132,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
     }
     
     private func makeItem(id: UUID = .init(), decription: String? = nil, location: String? = nil, imageURL: URL = URL(string: "https://a-url.com")!) -> (model: FeedItem, json: [String: Any]) {
-        let item = FeedItem(id: id, decription: description, location: location, imageURL: imageURL)
+        let item = FeedItem(id: id, description: description, location: location, imageURL: imageURL)
         let json = [
             "id": id.uuidString,
             "description": description,
