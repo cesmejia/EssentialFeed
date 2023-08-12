@@ -11,12 +11,12 @@ import EssentialFeed
 class CacheFeedUseCaseTests: XCTestCase {
     
     func test_init_doesNotMessageStoreUponCreation() {
-        let (_, store) = makeSUT ()
+        let (_, store) = makeSUT()
         XCTAssertEqual(store.receivedMessages, [])
     }
     
     func test_save_requestsCacheDeletion() {
-        let (sut, store) = makeSUT ()
+        let (sut, store) = makeSUT()
         sut.save(uniqueImageFeed().models) { _ in }
         XCTAssertEqual(store.receivedMessages, [.deleteCachedFeed])
     }
