@@ -194,3 +194,5 @@ private extension Date {
         return self + seconds
     }
 }
+
+//   Separating Queries & Side-effects for Simplicity and Reusability, Choosing Between Enum Switching Strategies, and Differentiating App-Specific from App-Agnostic Logic
